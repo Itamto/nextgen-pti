@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>574</width>
+    <height>437</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>41</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#175f6e;</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>41</width>
+       <height>381</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="btnNavHome">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+	border:none;
+}
+QPushButton:checked{
+	background: rgb(42, 179, 206)
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNavLeaderboard">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+	border:none;
+}
+QPushButton:checked{
+	background: rgb(42, 179, 206)
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/leaderboard_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/leaderboard_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNavAdd">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+	border:none;
+}
+QPushButton:checked{
+	background: rgb(42, 179, 206)
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/add_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/add_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNavInfo">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+	border:none;
+}
+QPushButton:checked{
+	background: rgb(42, 179, 206)
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/info_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/info_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNavSetting">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+	border:none;
+}
+QPushButton:checked{
+	background: rgb(42, 179, 206)
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="txtSearch">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>501</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+border: 1px solid rgb(0, 170, 255);
+background: #ffffffff;
+padding-left: 40px;
+</string>
+    </property>
+    <property name="placeholderText">
+     <string notr="true">Tìm kiếm mọi thứ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNavLeaderboard_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>20</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../images/search_40dp_175F6E_FILL0_wght400_GRAD0_opsz40.png</normaloff>../images/search_40dp_175F6E_FILL0_wght400_GRAD0_opsz40.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>521</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="page_home">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>90</y>
+        <width>511</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../images/2__1___1___1__93e4a132748647e6a3ff58b3fa64038a.webp</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Chào mừng bạn đến với Chill Shop</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>471</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>nhận đặt hàng mọi sản phẩm anime chính hãng từ các nguồn Nhật/Trung/Mỹ.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_bxh">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>491</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>489</width>
+         <height>319</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lọc theo nhãn hàng</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbBrand">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>151</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>All</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Good Smile Company</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Taito</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_add">
+     <widget class="QListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>491</width>
+        <height>271</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>491</width>
+        <height>58</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>100</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="btn_add">
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+border: 1px solid rgb(109, 80, 255);
+height: 40px;</string>
+         </property>
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_edit">
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+border: 1px solid rgb(109, 80, 255);
+height: 40px;</string>
+         </property>
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_remove">
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+border: 1px solid rgb(109, 80, 255);
+height: 40px;</string>
+         </property>
+         <property name="text">
+          <string>Remove</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_setting">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>35</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>setting</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_info">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>521</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Hàng đặt trước (Pre-Order/Order) là gì?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; nhận đặt hàng mọi sản phẩm anime chính hãng từ các nguồn Nhật/Trung/Mỹ.&lt;br /&gt;- PRE-ORDER là hình thức đặt hàng trước sản phẩm &lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;chưa ra mắt&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;. Sau khi thời gian đặt hàng kết thúc, nhà sản xuất sẽ sản xuất theo số lượng đặt hàng và sau đó ưu tiên giao hàng đến những người đã đặt hàng trước. Việc này thường mất một thời gian để sản xuất và giao hàng, nhưng bạn sẽ chắc chắn có cơ hội sở hữu sản phẩm đó với giá cố định không bị thay đổi sau khi phát hành.&lt;br /&gt;- ORDER là hình thức đặt mua sản phẩm &lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;đang lưu hành&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; trên thị trường nhưng không sẵn có tại kho chúng tôi. Hàng Order sẽ được giao sau 10-14 ngày. Lưu ý giá hàng Order thường xuyên thay đổi nên hãy inbox shop trực tiếp để được tư vấn đẩy đủ nhất.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Có cần cọc khi đặt hàng?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;Khi đặt hàng Pre-Order/Order bạn cần phải cọc tối thiểu 30% giá trị đơn hàng theo hình thức chuyển khoản (một số trường hợp đặc biệt vd học sinh không có tài khoản shop sẽ hỗ trợ cọc COD).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; text-decoration: underline; color:#000000;&quot;&gt;LƯU Ý:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;- Khách hủy đơn sẽ bị mất cọc, một số mặt hàng có thể thanh lý nhanh thì shop sẽ cho chuyển cọc thành voucher mua hàng (voucher chỉ áp dụng để mua sản phẩm có sẵn tại shop).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;- Nếu shop không thể giao hàng do lý do chính đáng từ phía NSX, NPP, hoặc shop nước ngoài (vd sản xuất không đủ, tồn kho không đủ) thì shop sẽ hoàn cọc + voucher mua hàng tương ứng 10% giá trị đã cọc cho đơn hàng sau.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Thời gian giao hàng? Thời gian &amp;quot;keep&amp;quot; hàng?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;- Thời gian giao hàng: &lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; cam kết giao hàng hỏa tốc 2h cho khách hàng nội thành TP.HCM và xử lý đơn trong vòng 24h đối với các sản phẩm sẵn kho. Với sản phẩm Pre-Order/Order hàng sẽ về VN sau 10-14 ngày sau khi nhận hàng tại kho Nhật/Trung/Mỹ. Vận chuyển nội địa VN từ 1 đển 3 ngày làm việc.&lt;br /&gt;- Thời gian keep hàng: chúng tôi giữ hàng tối đa 30 ngày kể từ ngày hàng về kho HCM. Trường hợp khách hàng cần thêm thời gian, xin chủ động liên hệ qua fanpage để chúng tôi hỗ trợ. LƯU Ý: hàng keep không hỗ trợ các chế độ bảo hành.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Các hình thức thanh toán?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; hỗ trợ các hình thức thanh toán sau:&lt;br /&gt;- Thanh toán COD khi nhận hàng. Lưu ý với các đơn trên 1tr sẽ phát sinh bảo hiểm &amp;amp; phí thu hộ.&lt;br /&gt;- Thanh toán ví điện tử MOMO.&lt;br /&gt;- Thanh toán chuyển khoản ngân hàng.&lt;br /&gt;- Thanh toán cổng thanh toán PayOn chấp nhận các thẻ quốc tế debit và credit.&lt;br /&gt;- Thanh toán Paypal dành cho khách sống tại nước ngoài.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Quy định bảo hành đổi trả. Bảo hành 1:1 nghĩa là gì?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; có chính sách hỗ trợ bảo hành 1:1 đổi mới các sản phẩm lỗi nhà sản xuất. Chi tiết khách hàng vui lòng tham khảo trong mục chính sách đổi trả &amp;amp; bảo hành.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Shop có đảm bảo hàng box đẹp hay không?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; cam kết hàng box đẹp với các sản phẩm có sẵn tại kho hoặc hàng PRE-ORDER/ORDER nguồn Nhật/Mỹ. Trường hợp box bị móp rách nặng shop sẽ hỗ trợ đền bù theo thỏa thuận.&lt;br /&gt;- Hàng PRE-ORDER/ORDER nguồn Trung do đặc thù vận chuyển, shop không đảm bảo box đẹp nhưng cam kết chất lượng sản phẩm không bị ảnh hưởng.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Tôi có thể đến mua trực tiếp hay không?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; không có cửa hàng trưng bày sản phẩm. Khách hàng có thể liên hệ trước nếu muốn xem hoặc nhận hàng đặt trước tại kho.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Chính sách bảo hành sản phẩm tại JH Figure&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;Khách hàng tham khảo chính sách bảo hành của &lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://jhfigure.com/pages/chinh-sach-doi-tra&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; text-decoration: underline; color:#158ed4;&quot;&gt;tại đây&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:13px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:496; color:#000000;&quot;&gt;Shop có ship nước ngoài không?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt;Khách hàng tham khảo dịch vụ ship quốc tế của &lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;JH&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; font-weight:600; color:#000000;&quot;&gt;Figure&lt;/span&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://jhfigure.com/pages/ship-quoc-te&quot;&gt;&lt;span style=&quot; font-family:'Mulish,sans-serif'; font-size:8pt; text-decoration: underline; color:#158ed4;&quot;&gt;tại đây&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

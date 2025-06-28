@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>383</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>361</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Chỉnh sửa bộ phim</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>361</width>
+     <height>236</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,7">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Nhập tên mô hình</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid rgb(255, 170, 0); 
+border-radius: 20px; 
+height: 40px; 
+padding-left: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Tên mô hình</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3,7">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Nhập mô tả</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid rgb(255, 170, 0); 
+border-radius: 20px; 
+height: 40px; 
+padding-left: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Mô tả</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,7">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Nhập đánh giá</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_3">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid rgb(255, 170, 0); 
+border-radius: 20px; 
+height: 40px; 
+padding-left: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Đánh giá</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="3,7">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Nhập đánh giá</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dateEdit">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid rgb(255, 170, 0); 
+border-radius: 20px; 
+height: 40px; 
+padding-left: 20px;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="9,1">
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Thêm hình</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="styleSheet">
+         <string notr="true">border-radius: 12px; 
+height: 40px; 
+width:200px; 
+background: rgb(0, 85, 127); 
+color: #fff;</string>
+        </property>
+        <property name="text">
+         <string>Nhập ô để thêm hình</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>8</width>
+          <height>8</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
