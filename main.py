@@ -18,6 +18,7 @@ class PageHome(QMainWindow):
         self.ui.btnNavAdd.clicked.connect(lambda: self.handleChangeNav(2))
         self.ui.btnNavSetting.clicked.connect(lambda: self.handleChangeNav(3))
         self.ui.btnNavInfo.clicked.connect(lambda: self.handleChangeNav(4))
+        self.ui.btnNavShop.clicked.connect(lambda: self.handleChangeNav(5))
     
         global database
         self.dtb = ModelDatabase()
