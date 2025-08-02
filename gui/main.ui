@@ -35,7 +35,7 @@
        <x>0</x>
        <y>10</y>
        <width>41</width>
-       <height>381</height>
+       <height>421</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -261,7 +261,45 @@ QPushButton:checked{
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../images/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+          <normaloff>../images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_logout">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+	border:none;
+}
+QPushButton:checked{
+	background: rgb(42, 179, 206)
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/exit_to_app_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</normaloff>../images/exit_to_app_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -598,9 +636,9 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>310</y>
+        <y>320</y>
         <width>511</width>
-        <height>61</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,5">
@@ -647,9 +685,9 @@ color: #fff;</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>20</y>
+        <y>0</y>
         <width>511</width>
-        <height>281</height>
+        <height>311</height>
        </rect>
       </property>
       <property name="widgetResizable">
@@ -661,7 +699,7 @@ color: #fff;</string>
          <x>0</x>
          <y>0</y>
          <width>509</width>
-         <height>279</height>
+         <height>309</height>
         </rect>
        </property>
       </widget>

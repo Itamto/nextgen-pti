@@ -1,11 +1,12 @@
-from PyQt6.QtWidgets import QApplication,QMainWindow,QWidget,QHBoxLayout,QMessageBox
+from PyQt6.QtWidgets import QApplication,QMainWindow,QWidget,QHBoxLayout,QVBoxLayout,QMessageBox
 from PyQt6 import uic
 import sys
 
-from chill_database import ModelDatabase,Model,UsernameDatabase
+from chill_database import ModelDatabase,Model,UsernameDatabase,CartDatabase
 from utils import ModelCRUD
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap
+from messagebox import MessageBox
 class PageHome(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -20,12 +21,20 @@ class PageHome(QMainWindow):
         self.ui.btnNavInfo.clicked.connect(lambda: self.handleChangeNav(4))
         self.ui.btnNavShop.clicked.connect(lambda: self.handleChangeNav(5))
     
-        global database
+        global database,cart
         self.dtb = ModelDatabase()
         database =self.dtb
+        self.cart = CartDatabase()
+        cart =self.cart
         self.setup_CRUD()
         self.setup_ShowModel()
+        self.setupCart()
 
+        if hasattr(self.ui, 'btn_logout'):
+            self.ui.btn_logout.clicked.connect(self.close)
+        else:
+            print("Cảnh báo: Không tìm thấy nút 'btn_logout' trong main.ui. Vui lòng kiểm tra objectName.")
+            
             
     def setup_CRUD(self):
         database.load_data()
@@ -40,12 +49,47 @@ class PageHome(QMainWindow):
 
     def setup_ShowModel(self): 
 # tạo ra một layout để chứa các item, sau đó hiển thị nó lên UI 
-        global h_layout 
+        global h_layout,v_layout
         self.horizontal_layout= QHBoxLayout(self.ui.scrollAreaWidgetContents) 
-        h_layout = self.horizontal_layout 
+        h_layout = self.horizontal_layout
         h_layout.setAlignment(Qt.AlignmentFlag.AlignLeft) 
+
         self.layout = ModelHorizontalLayout() 
         self.layout.display_layout()
+
+    def setupCart(self): 
+        cart.load_data()
+    # tạo ra một layout để chứa các item, sau đó hiển thị nó lên UI 
+        global v_layout
+        self.vertical_layout= QHBoxLayout(self.ui.scrollAreaWidgetContents_2) 
+        v_layout = self.vertical_layout
+        v_layout.setAlignment(Qt.AlignmentFlag.AlignLeft) 
+
+        self.layout = ModelVerticalLayout() 
+        self.layout.display_layout()
+
+class ModelVerticalLayout():
+    def display_layout(self):
+        for model in cart.model_list:
+            model_item_widget = ModelItemWidget(model)
+            v_layout.addWidget(model_item_widget)
+        widget.scrollAreaWidgetContents_2.setLayout(v_layout)
+
+    def clear_layout(self):
+        while v_layout.count():
+            child = v_layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+
+    def update_layout(self, item_list=None):
+        self.clear_layout()
+
+        if item_list is None:
+            item_list = cart.model_list
+            #Update layout from custom item list
+            for model in item_list:
+                model_item_widget = ModelItemWidget(model)
+                v_layout.addWidget(model_item_widget)
 
 class ModelHorizontalLayout():
     def display_layout(self):
@@ -79,7 +123,8 @@ class ModelItemWidget(QWidget):
         self.model = model
         self.display_description()
         self.ui.image.mousePressEvent = lambda e: self.handleShowDetail(e)
-    #bấm vào sẽ hiện phần chi tiết
+
+    #bấm vào sẽ hiện phần chi tiếtn
     def handleShowDetail(self,e):
         self.show_detail_dialog = ShowDetailDialog(self.model)
         self.show_detail_dialog.exec()
@@ -89,12 +134,7 @@ class ModelItemWidget(QWidget):
         self.ui.title.setText(self.model.name)
         self.ui.desc.setText(self.model.desc)#hiện thị derecspin
         self.ui.image.setPixmap(img_pixmap)#hiện thị hình ảnh
-class MessageBox(QMessageBox):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Thông báo")
-        self.setIcon(QMessageBox.Icon.Warning)
-        self.setStyleSheet("background-coler: #F8F2EC; coler: #356a9c")
+
 
 class Login(QMainWindow):
     def __init__(self):
@@ -209,6 +249,6 @@ if __name__ == "__main__":
 
     LoginPage = Login()
     registerPage = Register()
-    registerPage.show()
+    myWindow.show()
     
     sys.exit(app.exec())

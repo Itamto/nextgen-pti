@@ -1,6 +1,7 @@
 from dialog import AddDialog,EditDialog
-from PyQt6.QtWidgets import QMessageBox
 from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QMessageBox
+
 class ModelCRUD:
     def add(self):
         currIndex =self.ui.listWidget.currentRow()

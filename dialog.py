@@ -3,7 +3,8 @@ from PyQt6 import uic
 from PyQt6.QtCore import QDate , QDir
 from chill_database import Model 
 from PyQt6.QtGui import QPixmap
-
+from chill_database import CartDatabase
+from messagebox import MessageBox
 import os
 class AddDialog(QDialog):
     def __init__(self):
@@ -67,6 +68,26 @@ class ShowDetailDialog(QDialog):
         self.ui = uic.loadUi("gui/show_detail_dialog.ui",self)
         self.model = model
         self.display_description()
+        self.ui.btnBuy.clicked.connect(self.handleBuy)
+        self.cartDTB = CartDatabase()
+     
+
+    def handleBuy(self):
+        self.cartDTB.add_item_from_dict(
+            {
+            "name": self.model.name,
+            "desc": self.model.desc,
+            "desc_detail": self.model.desc_detail,
+            "brand": self.model.brand,
+            "price": self.model.price,
+            "image": self.model.image,
+            "released_date": self.model.released_date,
+        }
+        )
+        self.msg = MessageBox()
+        self.msg.setText("Đã thêm vào giỏ hàng")
+        self.msg.exec()
+
         
     def display_description(self):
         img_pixmap = QPixmap(self.model.image)

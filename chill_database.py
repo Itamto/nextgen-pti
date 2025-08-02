@@ -1,5 +1,6 @@
 
 from data_json import load_json_data,write_json_data
+
 #khởi tạo khuôn mãu cho sản phẩm cuối khoá
 class User:
     def __init__(self,username, email, password):
@@ -112,7 +113,7 @@ class ModelDatabase:
         self.model_dict_data = self.item_to_data()
         write_json_data("data.json",self.model_dict_data)
     
-    # xóa anime
+    # xoá model
     def delete_item(self, delete_title):
         anime_delete = self.get_item_by_title(delete_title) # tìm ra thằng anime bằng cách truyền title vào
         self.model_list.remove(anime_delete) # sử dụng hàm mà list hỗ trợ (remove) để xóa
@@ -146,3 +147,54 @@ class ModelDatabase:
         self.printTable() 
 
 
+
+
+class Cart(Model):
+    def __init__(self, id, name, desc, desc_detail, brand, price, image, released_date=None):
+        super().__init__(id, name, desc, desc_detail, brand, price, image, released_date)
+        
+
+        #cập nhật mô hình
+    def update(self,new_data):
+        for k, v in new_data.items():
+            if v:
+                setattr(self,k ,v)
+
+class CartDatabase():
+    def __init__(self):
+        self.model_list = list()
+        self.model_dict_data = load_json_data("cart.json") #danh sach
+        self.model_title_list = self.get_all_model_name() # danh sách các model dict
+
+
+    def get_all_model_name(self):
+        return [model["name"] for model in self.model_dict_data]
+    # đọc giữ liệu file Json
+    def load_data(self):
+        for model_dict in self.model_dict_data:
+            model = Model( id = model_dict["id"],
+                        name = model_dict["name"],
+                        desc = model_dict["desc"],
+                        desc_detail = model_dict["desc_detail"],
+                        brand = model_dict["brand"],
+                        price =model_dict["price"],
+                        image =model_dict["image"],
+                        released_date = model_dict["released_date"],
+                        )
+            
+            self.model_list.append(model) #thêm dữ liệu vào list
+
+    def add_item_from_dict(self, model_dict):
+        model_dict["id"] = len(self.model_title_list)
+        new_item = Model( id = model_dict["id"],
+                        name = model_dict["name"],
+                        desc = model_dict["desc"],
+                        desc_detail = model_dict["desc_detail"],
+                        brand = model_dict["brand"],
+                        price =model_dict["price"],
+                        image =model_dict["image"],
+                        released_date = model_dict["released_date"],
+        )
+        self.model_list.append(new_item)
+        self.model_dict_data.append(model_dict)
+        write_json_data("cart.json",self.model_dict_data) # ghi dữ liệu vào
